@@ -1,0 +1,8 @@
+.env
+.gbrain*/
+out/
+training/out/
+training/*.json
+__pycache__/
+.venv/
+*.egg-info/
