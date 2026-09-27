@@ -1,0 +1,13 @@
+[project]
+name = "ufo-ext-river"
+version = "0.1.0"
+description = "UFO tools that act for Michael through the river-voice-agent tools API (GBrain-backed)"
+requires-python = ">=3.12"
+dependencies = ["httpx", "pydantic"]
+
+[project.entry-points."ufo.extension"]
+river = "ufo_ext_river:manifest"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

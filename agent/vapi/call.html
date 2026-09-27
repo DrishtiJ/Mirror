@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Voice Agent Test</title>
+<style>
+  :root { --bg: #fff; --fg: #111; --muted: #666; --accent: #111; --line: #ddd; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #111; --fg: #eee; --muted: #999; --accent: #eee; --line: #333; } }
+  body { background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; max-width: 640px; margin: 40px auto; padding: 0 16px; }
+  input { width: 100%; padding: 8px; margin: 4px 0 12px; border: 1px solid var(--line); background: var(--bg); color: var(--fg); box-sizing: border-box; }
+  button { padding: 12px 20px; font-size: 16px; background: var(--accent); color: var(--bg); border: 0; cursor: pointer; }
+  #log { margin-top: 20px; white-space: pre-wrap; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Voice agent</h1>
+<label>Vapi public key <input id="pk" placeholder="from dashboard.vapi.ai → API Keys (public)"></label>
+<label>Assistant ID <input id="aid"></label>
+<label>Caller name <input id="caller" value="Sam"></label>
+<label>Notes <input id="notes" value="Met at the YC hackathon."></label>
+<button id="call">Start call</button>
+<div id="log"></div>
+<script type="module">
+  import Vapi from "https://cdn.jsdelivr.net/npm/@vapi-ai/web/+esm";
+  const $ = (id) => document.getElementById(id);
+  for (const k of ["pk", "aid"]) { try { $(k).value = localStorage.getItem(k) || ""; } catch {} }
+  let vapi = null;
+  const log = (s) => ($("log").textContent += s + "\n");
+  $("call").onclick = async () => {
+    if (vapi) { vapi.stop(); vapi = null; $("call").textContent = "Start call"; return; }
+    try { localStorage.setItem("pk", $("pk").value); localStorage.setItem("aid", $("aid").value); } catch {}
+    vapi = new Vapi($("pk").value.trim());
+    vapi.on("message", (m) => { if (m.type === "transcript" && m.transcriptType === "final") log(`${m.role}: ${m.transcript}`); });
+    vapi.on("error", (e) => log("error: " + JSON.stringify(e)));
+    vapi.on("call-end", () => log("— call ended —"));
+    await vapi.start($("aid").value.trim(), {
+      variableValues: { caller_name: $("caller").value, notes: $("notes").value, speaker_name: "Michael" },
+    });
+    $("call").textContent = "End call";
+  };
+</script>
+</body>
+</html>
