@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <!-- PLACEHOLDER: replace with a real app screenshot (see README). -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12151b"/>
+      <stop offset="1" stop-color="#0b0c0f"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8fd3ff" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#8fd3ff" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#8fd3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="390" height="844" fill="url(#bg)"/>
+
+  <!-- status bar -->
+  <text x="34" y="54" fill="#eceef2" font-size="15" font-weight="600">8:12</text>
+  <rect x="318" y="43" width="26" height="12" rx="3" fill="none" stroke="#eceef2" stroke-opacity=".6"/>
+  <rect x="320" y="45" width="18" height="8" rx="1.5" fill="#eceef2"/>
+
+  <!-- header -->
+  <text x="195" y="104" fill="#8b91a0" font-size="12" letter-spacing="2" text-anchor="middle">DRIVING MODE</text>
+  <text x="195" y="132" fill="#eceef2" font-size="22" text-anchor="middle" font-family="Georgia, serif">Mirror</text>
+
+  <!-- you bubble -->
+  <rect x="96" y="168" width="270" height="62" rx="20" fill="#ffb86b" fill-opacity=".14" stroke="#ffb86b" stroke-opacity=".3"/>
+  <text x="114" y="194" fill="#eceef2" font-size="14">Anything urgent before</text>
+  <text x="114" y="214" fill="#eceef2" font-size="14">I get to the office?</text>
+
+  <!-- mirror bubble -->
+  <rect x="24" y="246" width="290" height="104" rx="20" fill="#8fd3ff" fill-opacity=".08" stroke="#8fd3ff" stroke-opacity=".25"/>
+  <text x="42" y="272" fill="#cfe9fb" font-size="14">Three things: Priya needs the deck</text>
+  <text x="42" y="292" fill="#cfe9fb" font-size="14">approved, Jordan wants to move</text>
+  <text x="42" y="312" fill="#cfe9fb" font-size="14">your 1:1, and the Acme invoice is</text>
+  <text x="42" y="332" fill="#cfe9fb" font-size="14">due today.</text>
+
+  <!-- you bubble -->
+  <rect x="116" y="366" width="250" height="62" rx="20" fill="#ffb86b" fill-opacity=".14" stroke="#ffb86b" stroke-opacity=".3"/>
+  <text x="134" y="392" fill="#eceef2" font-size="14">Approve it, Thursday works,</text>
+  <text x="134" y="412" fill="#eceef2" font-size="14">and pay it.</text>
+
+  <!-- agents card -->
+  <rect x="24" y="444" width="290" height="132" rx="20" fill="#16181e" stroke="#ffffff" stroke-opacity=".1"/>
+  <text x="42" y="470" fill="#8b91a0" font-size="11" letter-spacing="1.5">3 AGENTS DISPATCHED</text>
+  <circle cx="48" cy="496" r="5" fill="#8fd3ff"/>
+  <text x="62" y="501" fill="#eceef2" font-size="14">Replied to Priya on Slack</text>
+  <circle cx="48" cy="524" r="5" fill="#8fd3ff"/>
+  <text x="62" y="529" fill="#eceef2" font-size="14">1:1 moved to Thu, 2pm</text>
+  <circle cx="48" cy="552" r="5" fill="none" stroke="#8fd3ff" stroke-width="1.5"/>
+  <text x="62" y="557" fill="#8b91a0" font-size="14">Paying Acme invoice…</text>
+
+  <!-- voice orb -->
+  <circle cx="195" cy="700" r="80" fill="url(#orb)"/>
+  <circle cx="195" cy="700" r="34" fill="#8fd3ff" fill-opacity=".9"/>
+  <g stroke="#0b0c0f" stroke-width="3" stroke-linecap="round">
+    <line x1="181" y1="694" x2="181" y2="706"/>
+    <line x1="189" y1="688" x2="189" y2="712"/>
+    <line x1="197" y1="684" x2="197" y2="716"/>
+    <line x1="205" y1="690" x2="205" y2="710"/>
+    <line x1="213" y1="695" x2="213" y2="705"/>
+  </g>
+  <text x="195" y="800" fill="#8b91a0" font-size="12" text-anchor="middle">Listening…</text>
+
+  <!-- home indicator -->
+  <rect x="130" y="826" width="130" height="5" rx="2.5" fill="#eceef2" fill-opacity=".5"/>
+</svg>

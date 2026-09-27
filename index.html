@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mirror — Your mirror self, acting in parallel</title>
+  <meta name="description" content="Mirror is an AI double that knows your context from email, Slack and calendar, holds conversations for you, and dispatches agents to get things done — while you drive, meet, or live." />
+  <meta name="theme-color" content="#0b0c0f" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mirror — You, in parallel." />
+  <meta property="og:description" content="Your mirror self, acting in parallel. Talk to it. It handles the rest." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Mirror home">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__word">Mirror</span>
+      </a>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span>
+      </button>
+      <nav class="nav__links" id="nav-links">
+        <a href="#parallel">In parallel</a>
+        <a href="#how">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#trust">Trust</a>
+        <a href="#waitlist" class="btn btn--small">Join waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Your mirror self, acting in parallel.</p>
+
+          <h1 class="hero__title reveal">
+            You, <em>in parallel.</em>
+          </h1>
+          <p class="hero__reflection" aria-hidden="true">You, <em>in parallel.</em></p>
+
+          <p class="hero__lede reveal">
+            Mirror is an AI double that already knows your context from your email, Slack and calendar.
+            Just talk to it. It holds the conversations you don't have time for and sends agents to
+            finish the work, so you can drive, meet, focus or simply live.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a href="#waitlist" class="btn">Get early access</a>
+            <a href="#how" class="btn btn--ghost">See how it works</a>
+          </div>
+
+          <ul class="hero__sources reveal" aria-label="Mirror learns from">
+            <li>Email</li><li>Slack</li><li>Calendar</li><li>Docs</li><li>Messages</li>
+          </ul>
+        </div>
+
+        <!-- Phone mockup.
+             TO USE A REAL SCREENSHOT: drop your image into assets/ (e.g.
+             assets/phone-screenshot.png, 1170×2532 or any ~9:19.5 ratio)
+             and change the src below. -->
+        <div class="hero__device reveal">
+          <div class="phone">
+            <div class="phone__notch" aria-hidden="true"></div>
+            <img class="phone__screen" src="assets/phone-placeholder.svg"
+                 alt="Mirror app: a voice conversation where Mirror summarizes urgent items and dispatches agents to handle them" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TWO TIMELINES ============ -->
+    <section class="section parallel" id="parallel">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">One morning, two timelines</p>
+          <h2>While you live your day, <em>Mirror works it.</em></h2>
+        </header>
+
+        <div class="timeline reveal">
+          <div class="timeline__legend">
+            <span class="tag tag--you">You</span>
+            <span class="tag tag--mirror">Mirror</span>
+          </div>
+
+          <ol class="timeline__rows">
+            <li class="row">
+              <time>8:05</time>
+              <p class="row__you">Leave for work. “Hey Mirror, anything urgent?”</p>
+              <p class="row__mirror">Reads 41 new messages. Flags 3 that need you.</p>
+            </li>
+            <li class="row">
+              <time>8:12</time>
+              <p class="row__you">On the freeway. “Approve the deck, move Jordan, pay the invoice.”</p>
+              <p class="row__mirror">Sends 3 agents. Replies to Priya on Slack in your voice.</p>
+            </li>
+            <li class="row">
+              <time>8:30</time>
+              <p class="row__you">Still driving. Podcast on.</p>
+              <p class="row__mirror">Moves the 1:1 to Thursday at 2pm. Pays the vendor invoice.</p>
+            </li>
+            <li class="row">
+              <time>9:00</time>
+              <p class="row__you">Walk into standup, fully caught up.</p>
+              <p class="row__mirror">“All done. One thing waiting on you: Alex’s contract question.”</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how" id="how">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2>Reflect. Talk. <em>Dispatch.</em></h2>
+        </header>
+
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Reflect</h3>
+            <p>Connect your email, Slack and calendar. Mirror learns your people, projects,
+               priorities and the way you write, so it responds like you would.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Talk</h3>
+            <p>There's no dashboard to learn. Speak or text Mirror the way you'd talk to a
+               chief of staff: “What did I miss?” “Tell her yes, but push it a week.”</p>
+          </article>
+          <article class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Dispatch</h3>
+            <p>Mirror breaks each request into tasks and sends agents to finish them: replies,
+               reschedules, follow-ups and payments. Then it reports back in one line.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ USE CASES ============ -->
+    <section class="section cases" id="use-cases">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Use cases</p>
+          <h2>For every moment your hands <em>are full.</em></h2>
+        </header>
+
+        <div class="cases__grid">
+          <article class="case reveal">
+            <div class="case__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/><path d="M3.5 10h6M14.5 10h6M12 14.5V21"/></svg>
+            </div>
+            <h3>Behind the wheel</h3>
+            <p>Clear your inbox by voice on the commute, with nothing to read. Mirror summarizes, you decide, and agents do the work.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            </div>
+            <h3>Back-to-back meetings</h3>
+            <p>While you present, Mirror answers the Slack threads piling up and only interrupts when something really needs you.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-3.5 10.9V17h7v-3.1A6 6 0 0 0 12 3z"/><path d="M9.5 21h5"/></svg>
+            </div>
+            <h3>Deep work</h3>
+            <p>Go heads-down for hours. Mirror handles routine replies and keeps a short list of what's waiting on you when you're back.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2 16l20-6-4-3-6 2-5-4-2 1 3 5-4 1-2-1-1 1z"/><path d="M3 21h18"/></svg>
+            </div>
+            <h3>In transit</h3>
+            <p>On a flight or offline? Mirror keeps conversations moving and hands you a two-minute briefing when you land.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </div>
+            <h3>Across time zones</h3>
+            <p>Your team in Bangalore needs an answer at 2am your time. Mirror replies with what you'd say, and you sleep through it.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+            </div>
+            <h3>Off the clock</h3>
+            <p>At your kid's game or at dinner, stay present. Mirror covers the “quick question” messages and the rest can wait until Monday.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONVERSATION-FIRST ============ -->
+    <section class="section talk">
+      <div class="container talk__inner">
+        <header class="section__head reveal">
+          <p class="eyebrow">Conversation is the interface</p>
+          <h2>No dashboards. No workflows. <em>Just say it.</em></h2>
+        </header>
+
+        <div class="bubbles">
+          <p class="bubble bubble--you reveal">“What did I miss while I was in the board meeting?”</p>
+          <p class="bubble bubble--mirror reveal">“Two things. Legal signed off on the MSA, and Sam wants to know if you can join Friday's offsite.”</p>
+          <p class="bubble bubble--you reveal">“Tell Sam yes, but only the afternoon. Forward the MSA to finance.”</p>
+          <p class="bubble bubble--mirror reveal">“Done. Sam confirmed, and it's on your calendar for 1 to 5pm Friday.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="section trust" id="trust">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Trust</p>
+          <h2>It's you, <em>with guardrails.</em></h2>
+        </header>
+
+        <div class="trust__grid">
+          <div class="trust__item reveal">
+            <h3>You set the rules</h3>
+            <p>Choose what Mirror can send by itself and what it has to ask about first. Anything touching money, contracts or new contacts waits for your yes.</p>
+          </div>
+          <div class="trust__item reveal">
+            <h3>Sounds like you</h3>
+            <p>Mirror learns your tone from how you already write, so replies read the way you'd write them, not like a bot.</p>
+          </div>
+          <div class="trust__item reveal">
+            <h3>Every action logged</h3>
+            <p>See everything Mirror said and did, and why. Undo any action with a single sentence.</p>
+          </div>
+          <div class="trust__item reveal">
+            <h3>Your context stays yours</h3>
+            <p>Your data is encrypted, scoped to you and never used to train shared models. Disconnect any source at any time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WAITLIST ============ -->
+    <section class="section waitlist" id="waitlist">
+      <div class="container waitlist__inner reveal">
+        <h2>Meet <em>yourself.</em></h2>
+        <p>Mirror is in private beta. Join the waitlist and we'll let you in soon.</p>
+
+        <!-- Static-site form: point action at Formspree, Basin, Getform, etc.
+             e.g. action="https://formspree.io/f/YOUR_ID" method="POST"
+             Until then, main.js shows a local confirmation. -->
+        <form class="waitlist__form" action="#" method="POST" novalidate>
+          <label for="email" class="sr-only">Work email</label>
+          <input id="email" name="email" type="email" placeholder="you@company.com" required autocomplete="email" />
+          <button type="submit" class="btn">Join waitlist</button>
+        </form>
+        <p class="waitlist__note" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="brand">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__word">Mirror</span>
+      </a>
+      <p class="footer__tag">Your mirror self, acting in parallel.</p>
+      <p class="footer__copy">© <span id="year"></span> Mirror. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
