@@ -23,6 +23,27 @@
     });
   }
 
+  // Voiceprint: the same waveform for "you" and its reflection for "Mirror"
+  var waves = document.querySelectorAll("[data-wave]");
+  if (waves.length) {
+    var bars = window.innerWidth < 720 ? 40 : 56;
+    var heights = [];
+    for (var i = 0; i < bars; i++) {
+      var t = i / bars;
+      var env = Math.sin(Math.PI * t);                       // swell in the middle
+      var h = env * (0.55 + 0.45 * Math.abs(Math.sin(i * 1.7) * Math.cos(i * 0.6)));
+      heights.push(Math.max(0.08, h));
+    }
+    waves.forEach(function (wave) {
+      heights.forEach(function (h, i) {
+        var bar = document.createElement("span");
+        bar.style.height = Math.round(h * 100) + "%";
+        bar.style.animationDelay = (i % 9) * -0.18 + "s";
+        wave.appendChild(bar);
+      });
+    });
+  }
+
   // Reveal on scroll
   var items = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {

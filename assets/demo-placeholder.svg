@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <!-- PLACEHOLDER: driver's view. Replace with a demo screenshot or video (see index.html). -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#141722"/>
+      <stop offset="0.7" stop-color="#2b2433"/>
+      <stop offset="1" stop-color="#4a3326"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.5" cy="1" r="0.6">
+      <stop offset="0" stop-color="#ffb86b" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffb86b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="road" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#20222a"/>
+      <stop offset="1" stop-color="#101116"/>
+    </linearGradient>
+    <linearGradient id="dash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15171c"/>
+      <stop offset="1" stop-color="#07080a"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#8fd3ff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#8fd3ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- sky + horizon glow -->
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <ellipse cx="880" cy="370" rx="700" ry="200" fill="url(#sun)"/>
+
+  <!-- hills -->
+  <path d="M0 370 L180 330 L360 355 L520 318 L700 350 L880 340 L1060 312 L1240 348 L1420 322 L1600 350 L1600 380 L0 380 Z" fill="#1a1a22"/>
+
+  <!-- road (vanishing point ~ 880,370) -->
+  <path d="M860 370 L900 370 L1560 900 L120 900 Z" fill="url(#road)"/>
+  <path d="M860 370 L120 900" stroke="#6b6f7a" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M900 370 L1560 900" stroke="#6b6f7a" stroke-opacity=".5" stroke-width="3"/>
+  <!-- lane dashes -->
+  <g fill="#e9e3d2" fill-opacity=".75">
+    <path d="M878 385 L882 385 L883 398 L877 398 Z"/>
+    <path d="M875 420 L885 420 L887 445 L873 445 Z"/>
+    <path d="M869 490 L891 490 L895 540 L865 540 Z"/>
+    <path d="M858 620 L902 620 L912 720 L848 720 Z"/>
+  </g>
+
+  <!-- car ahead: tail lights -->
+  <rect x="930" y="402" width="46" height="22" rx="4" fill="#23252c"/>
+  <circle cx="936" cy="414" r="4" fill="#ff5a4e"/>
+  <circle cx="970" cy="414" r="4" fill="#ff5a4e"/>
+  <circle cx="936" cy="414" r="12" fill="#ff5a4e" fill-opacity=".2"/>
+  <circle cx="970" cy="414" r="12" fill="#ff5a4e" fill-opacity=".2"/>
+
+  <!-- windshield frame / A-pillars -->
+  <path d="M0 0 L1600 0 L1600 70 Q800 30 0 70 Z" fill="#08090b"/>
+  <path d="M0 0 L140 0 L40 640 L0 660 Z" fill="#08090b"/>
+  <path d="M1600 0 L1460 0 L1560 640 L1600 660 Z" fill="#08090b"/>
+  <!-- rear-view mirror -->
+  <rect x="790" y="58" width="200" height="56" rx="18" fill="#0d0e12" stroke="#ffffff" stroke-opacity=".08"/>
+
+  <!-- dashboard -->
+  <path d="M0 640 Q800 560 1600 640 L1600 900 L0 900 Z" fill="url(#dash)"/>
+  <path d="M0 640 Q800 560 1600 640" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+
+  <!-- steering wheel (left-hand drive) -->
+  <circle cx="470" cy="930" r="250" fill="none" stroke="#0b0c0f" stroke-width="46"/>
+  <circle cx="470" cy="930" r="250" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="2"/>
+  <path d="M300 870 Q470 800 640 870" fill="none" stroke="#0b0c0f" stroke-width="40" stroke-linecap="round"/>
+  <!-- gauge glow -->
+  <path d="M390 700 Q470 675 550 700" fill="none" stroke="#8fd3ff" stroke-opacity=".35" stroke-width="3"/>
+
+  <!-- phone on dash mount -->
+  <rect x="1090" y="560" width="170" height="300" rx="26" fill="#1c1f26" stroke="#ffffff" stroke-opacity=".15" stroke-width="2"/>
+  <rect x="1100" y="570" width="150" height="280" rx="18" fill="#0e1014"/>
+  <text x="1175" y="610" fill="#8b91a0" font-size="11" letter-spacing="2" text-anchor="middle">DRIVING MODE</text>
+  <circle cx="1175" cy="700" r="60" fill="url(#orb)"/>
+  <circle cx="1175" cy="700" r="26" fill="#8fd3ff"/>
+  <g stroke="#0b0c0f" stroke-width="3" stroke-linecap="round">
+    <line x1="1165" y1="694" x2="1165" y2="706"/>
+    <line x1="1175" y1="688" x2="1175" y2="712"/>
+    <line x1="1185" y1="694" x2="1185" y2="706"/>
+  </g>
+  <text x="1175" y="790" fill="#cfe9fb" font-size="13" text-anchor="middle">Calling Jordan</text>
+  <text x="1175" y="810" fill="#8b91a0" font-size="12" text-anchor="middle">in your voice…</text>
+
+  <!-- voice transcript overlay -->
+  <g>
+    <rect x="1010" y="150" width="480" height="64" rx="22" fill="#ffb86b" fill-opacity=".16" stroke="#ffb86b" stroke-opacity=".4"/>
+    <text x="1034" y="190" fill="#f4efe8" font-size="20">“Tell Jordan Thursday works.”</text>
+    <rect x="970" y="232" width="520" height="64" rx="22" fill="#8fd3ff" fill-opacity=".12" stroke="#8fd3ff" stroke-opacity=".4"/>
+    <text x="994" y="272" fill="#dff1fc" font-size="20">“On it. Calling him now, in your voice.”</text>
+  </g>
+</svg>
